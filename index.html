@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive UI with Animations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="fade-in">Interactive UI with Animations</h1>
+    </header>
+    
+    <div class="toggle-container fade-in">
+      <span>Light</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+      <span>Dark</span>
+    </div>
+    
+    <div class="card fade-in">
+      <h2>Animation Controls</h2>
+      <p>Click on a button to apply a different animation to the box below:</p>
+      <div class="controls">
+        <button class="button" id="pulseBtn">Pulse</button>
+        <button class="button" id="rotateBtn">Rotate</button>
+        <button class="button" id="bounceBtn">Bounce</button>
+        <button class="button" id="resetBtn">Reset</button>
+      </div>
+      <div class="animation-box" id="animBox"></div>
+    </div>
+    
+    <div class="card preferences fade-in">
+      <h2>User Preferences</h2>
+      <p>Choose your favorite color (will be saved to localStorage):</p>
+      <div class="color-palette">
+        <div class="color-option" style="background-color: #4a6fa5;" data-color="#4a6fa5"></div>
+        <div class="color-option" style="background-color: #e77e4d;" data-color="#e77e4d"></div>
+        <div class="color-option" style="background-color: #5cb85c;" data-color="#5cb85c"></div>
+        <div class="color-option" style="background-color: #d9534f;" data-color="#d9534f"></div>
+        <div class="color-option" style="background-color: #9b59b6;" data-color="#9b59b6"></div>
+      </div>
+      
+      <div class="stats">
+        <div class="stat-item">
+          <h3>Animation Changes</h3>
+          <p id="animationCount">0</p>
+        </div>
+        <div class="stat-item">
+          <h3>Theme Toggles</h3>
+          <p id="themeToggles">0</p>
+        </div>
+        <div class="stat-item">
+          <h3>Color Changes</h3>
+          <p id="colorChanges">0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="notification" id="notification">Settings saved!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
